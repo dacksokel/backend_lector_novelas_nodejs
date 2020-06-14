@@ -8,7 +8,11 @@ router.get('/', async (req,res)=>{
          
     res.json(novelas);
 })
+router.get('/:id', async (req,res)=>{
+    const novela = await Novelas.findById(req.params.id)
 
+    res.json(novela)
+})
 router.post('/',async (req,res)=>{
     
     const {nombre, autor, fuente, imagen, resumen} = req.body
