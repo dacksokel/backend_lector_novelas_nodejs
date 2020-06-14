@@ -4,7 +4,7 @@ const path = require('path')
 const app = express()
 const {mongoose} = require('./database')
 //Setting
-app.set('port', process.env.PORT || 4000)
+app.set('port', process.env.PORT || 8000)
 
 //Middleware --> funciones que se ejecuntan antes de llegar a las rutas
 app.use(morgan('dev'));
